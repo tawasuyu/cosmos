@@ -1,0 +1,18 @@
+[package]
+name = "cosmos-cli"
+version = { workspace = true }
+edition = { workspace = true }
+license = { workspace = true }
+description = "Tahuantinsuyu — CLI cliente del service socket. Pide cómputos de cartas sin abrir la GUI."
+
+[dependencies]
+cosmos-card = { path = "../cosmos-card" }
+cosmos-model = { path = "../cosmos-model" }
+clap = { workspace = true }
+tokio = { workspace = true }
+serde_json = { workspace = true }
+anyhow = { workspace = true }
+
+[[bin]]
+name = "cosmos-cli"
+path = "src/main.rs"

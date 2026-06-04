@@ -1,0 +1,29 @@
+[package]
+name = "cosmos-coords"
+version.workspace = true
+authors.workspace = true
+edition.workspace = true
+license.workspace = true
+repository.workspace = true
+description = "Astronomical coordinate transformations"
+keywords = ["astronomy", "coordinates", "celestial", "astrometry", "icrs"]
+categories = ["science"]
+
+[dependencies]
+cosmos-core.workspace = true
+celestial-eop-data.workspace = true
+cosmos-time.workspace = true
+libm.workspace = true
+serde = { workspace = true, optional = true }
+serde_json = { workspace = true, optional = true }
+thiserror.workspace = true
+
+[features]
+default = []
+serde = ["dep:serde", "dep:serde_json", "cosmos-core/serde", "cosmos-time/serde"]
+
+[dev-dependencies]
+criterion.workspace = true
+reqwest.workspace = true
+serde_json.workspace = true
+tokio.workspace = true

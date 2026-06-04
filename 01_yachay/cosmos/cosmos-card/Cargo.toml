@@ -1,0 +1,19 @@
+[package]
+name = "cosmos-card"
+version = { workspace = true }
+edition = { workspace = true }
+license = { workspace = true }
+description = "Tahuantinsuyu — Tarjeta de Presentación brahman + spawn del sidecar + protocolo del service socket."
+
+[dependencies]
+card-core = { workspace = true }
+card-sidecar = { workspace = true }
+cosmos-engine = { path = "../cosmos-engine" }
+cosmos-model = { path = "../cosmos-model" }
+ulid = { workspace = true }
+serde = { workspace = true }
+postcard = { workspace = true }
+tokio = { workspace = true }
+tracing = { workspace = true }
+directories = { workspace = true }
+thiserror = { workspace = true }
